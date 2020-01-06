@@ -1,0 +1,172 @@
+.hover-shadow {
+  transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -webkit-transition: 0.3s ease; }
+  .hover-shadow:hover {
+    box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.105) !important;
+    transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease; }
+
+.bg-0 {
+  background: unset !important; }
+
+.rounded-circle-bottom {
+  border-radius: 0px 0px 100% 100%; }
+
+.border-half-primary {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--primary) 50%, transparent 0%); }
+
+.border-half-success {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--success) 50%, transparent 0%); }
+
+.border-half-warning {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--warning) 50%, transparent 0%); }
+
+.border-half-danger {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--danger) 50%, transparent 0%); }
+
+.border-half-info {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--info) 50%, transparent 0%); }
+
+.border-half-dark {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--dark) 50%, transparent 0%); }
+
+.border-half-secondary {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--secondary) 50%, transparent 0%); }
+
+.border-half-white {
+  padding: .25rem;
+  background: linear-gradient(to top, var(--white) 50%, transparent 0%); }
+
+.card-person {
+  border: unset; }
+  .card-person.style-1 .card-person-row, .card-person.style-2 .card-person-row {
+    width: 100%;
+    height: 130px;
+    padding: 1em;
+    display: flex;
+    position: relative; }
+  .card-person.style-1 .card-person-avatar, .card-person.style-2 .card-person-avatar {
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%; }
+    .card-person.style-1 .card-person-avatar.with-border, .card-person.style-2 .card-person-avatar.with-border {
+      border: 3px solid #fff; }
+  .card-person.style-1 {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .card-person.style-1 .card-person-bg {
+      height: 75px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .card-person.style-2 {
+    background-color: unset; }
+    .card-person.style-2 .card-person-row {
+      height: unset !important; }
+    .card-person.style-2 .card-body {
+      margin-top: -70px;
+      padding-top: 70px;
+      background-color: #fff;
+      border-radius: 20px;
+      position: relative; }
+      .card-person.style-2 .card-body[class*="shadow-before"] {
+        border-radius: 25px 25px 25px 100px; }
+        .card-person.style-2 .card-body[class*="shadow-before"]:after {
+          content: "";
+          position: absolute;
+          top: -4px;
+          left: 0px;
+          right: -4px;
+          bottom: 4px;
+          background-color: var(--secondary);
+          border-radius: 28px 28px 28px 100px;
+          z-index: -1; }
+      .card-person.style-2 .card-body.shadow-before-primary:after {
+        background-color: var(--primary); }
+      .card-person.style-2 .card-body.shadow-before-success:after {
+        background-color: var(--success); }
+      .card-person.style-2 .card-body.shadow-before-warning:after {
+        background-color: var(--warning); }
+      .card-person.style-2 .card-body.shadow-before-danger:after {
+        background-color: var(--danger); }
+      .card-person.style-2 .card-body.shadow-before-info:after {
+        background-color: var(--info); }
+      .card-person.style-2 .card-body.shadow-before-dark:after {
+        background-color: var(--dark); }
+      .card-person.style-2 .card-body.shadow-before-secondary:after {
+        background-color: var(--secondary); }
+      .card-person.style-2 .card-body.shadow-before-white:after {
+        background-color: var(--white); }
+  .card-person.style-3 {
+    border-radius: 7px;
+    overflow: hidden; }
+    .card-person.style-3:hover .card-person-avatar {
+      opacity: 1 !important;
+      filter: unset !important;
+      transition: 0.3s ease;
+      -o-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      -webkit-transition: 0.3s ease; }
+    .card-person.style-3 .card-person-row {
+      position: relative;
+      border-radius: 100% 0% 100% 0%/0% 0% 100% 100%;
+      overflow: hidden;
+      box-shadow: 7px -2px 0px 2px rgba(0, 0, 0, 0.05);
+      -mox-box-shadow: 7px -2px 0px 2px rgba(0, 0, 0, 0.05);
+      -webkit-box-shadow: 7px -2px 0px 2px rgba(0, 0, 0, 0.05); }
+      .card-person.style-3 .card-person-row .card-person-avatar {
+        transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        object-fit: cover;
+        object-position: center;
+        height: 100px;
+        width: 100%;
+        opacity: 0.3;
+        filter: grayscale(1);
+        position: relative; }
+  .card-person.style-4 {
+    position: relative;
+    padding: 10px;
+    border-radius: 7px;
+    overflow: hidden; }
+    .card-person.style-4 .card-person-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      z-index: 0;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .card-person.style-4 .card-person-row {
+      position: relative; }
+      .card-person.style-4 .card-person-row .card-person-avatar {
+        border-radius: 100%;
+        height: 100px;
+        width: 100px; }
+    .card-person.style-4 .media-body {
+      position: relative; }
+
+/* end card-person */
+
+/*# sourceMappingURL=card-person-bs.css.map */

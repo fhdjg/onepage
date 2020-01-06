@@ -1,0 +1,37 @@
+@mixin x_transition($val){
+	transition: $val;
+	-o-transition: $val;
+	-moz-transition: $val;
+	-webkit-transition: $val;
+}
+
+@mixin x_transform($val){
+	transform: $val;
+	-o-transform: $val;
+	-ms-transform: $val;
+	-moz-transform: $val;
+	-webkit-transform: $val;
+}
+
+@mixin x_box_shadow($val){
+	box-shadow: $val;
+	-mox-box-shadow: $val;
+	-webkit-box-shadow: $val;
+}
+
+@mixin data_bg_color($cl_name){
+	&[data-color="bg-#{$cl_name}"]{
+		background-color: var(--$cl_name);
+	}
+}
+@mixin bd_half($cl_name){
+	.border-half-#{$cl_name}{
+		padding: .25rem;
+		background: linear-gradient(to top, var(--$cl_name) 50%, transparent 0%);
+	}
+}
+@mixin shadow_before($cl_name) {
+	&.shadow-before-#{$cl_name}:after{
+		background-color: var(--$cl_name);
+	}
+}

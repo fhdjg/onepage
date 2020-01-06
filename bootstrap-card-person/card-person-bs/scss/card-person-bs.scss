@@ -1,0 +1,152 @@
+@import "mixins.scss";
+
+.hover-shadow{
+		@include x_transition(0.3s ease);
+	&:hover{
+		box-shadow: 0 .8rem 1rem rgba(0,0,0,.105)!important;
+		@include x_transition(0.3s ease);
+	}
+}
+.bg-0{
+	background: unset !important;
+}
+
+.rounded-circle-bottom{
+ border-radius: 0px 0px 100% 100%;
+}
+@include bd_half(primary);
+@include bd_half(success);
+@include bd_half(warning);
+@include bd_half(danger);
+@include bd_half(info);
+@include bd_half(dark);
+@include bd_half(secondary);
+@include bd_half(white);
+
+.card-person{
+	border: unset;
+	&.style-1, &.style-2{
+		.card-person-row{
+			width:100%;
+			height: 130px;
+			padding: 1em;
+			display: flex;
+			position: relative;
+		}
+		.card-person-avatar{
+			position: relative;
+			z-index: 1;
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			&.with-border{
+				border: 3px solid #fff;
+			}
+		}
+	}
+	&.style-1{
+	overflow: hidden;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		.card-person-bg{
+			height: 75px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&.style-2{
+		background-color: unset;
+		.card-person-row{
+			height: unset !important;
+		}
+		.card-body{
+			margin-top: -70px;
+			padding-top: 70px;
+			background-color: #fff;
+			border-radius: 20px;
+			position: relative;
+			&[class*="shadow-before"]{
+				border-radius: 25px 25px 25px 100px;
+				&:after{
+					content: "";
+					position: absolute;
+					top: -4px;
+					left: 0px;
+					right: -4px;
+					bottom: 4px;
+					background-color: var(--secondary);
+					border-radius: 28px 28px 28px 100px;
+					z-index: -1;
+				}
+			}
+			@include shadow_before(primary);
+			@include shadow_before(success);
+			@include shadow_before(warning);
+			@include shadow_before(danger);
+			@include shadow_before(info);
+			@include shadow_before(dark);
+			@include shadow_before(secondary);
+			@include shadow_before(white);
+		}
+	}
+
+	&.style-3{
+		border-radius: 7px;
+		overflow: hidden;
+		&:hover .card-person-avatar{
+			opacity: 1!important;
+			filter: unset !important;
+			@include x_transition(0.3s ease);
+		}
+		.card-person-row{
+			position: relative;
+			border-radius: 100% 0% 100% 0% / 0% 0% 100% 100% ;
+			overflow: hidden;
+			@include x_box_shadow(7px -2px 0px 2px rgba(0, 0, 0, 0.05));
+			.card-person-avatar{
+				@include x_transition(0.3s ease);
+				object-fit: cover;
+				object-position: center;
+				height: 100px;
+				width: 100%;
+				opacity: 0.3;
+				filter: grayscale(1);
+				position: relative;
+			}
+		}
+	}
+
+	&.style-4{
+		position: relative;
+		padding: 10px;
+		border-radius: 7px;
+		overflow: hidden;
+		.card-person-bg{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 65px;
+			z-index: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.card-person-row{
+			position: relative;
+			.card-person-avatar{
+				border-radius: 100%;
+				height: 100px;
+				width: 100px;
+			}
+		}
+		.media-body{
+			position: relative;
+		}
+	}
+} /* end card-person */
